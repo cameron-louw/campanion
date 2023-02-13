@@ -1,3 +1,16 @@
-node_modules
+# .gitignore
 
+# Log files
+*.log
+
+# Binary files
+*.jpg
+*.png
+*.gif
+
+# Directories
+node_modules/
+
+# Environment-specific files
 .env
+.env.*.local
