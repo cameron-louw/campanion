@@ -2,18 +2,18 @@ import request from 'superagent'
 
 export function getCampsites() {
   return request
-    .get('http://campanion.vercel.app/api/v1/campsites')
+    .get('https://campanion.vercel.app/api/v1/campsites')
     .then((res) => res.body)
 }
 
 export function getCampsiteNews() {
   return request
-    .get('http://campanion.vercel.app/api/v1/campsite-news')
+    .get('https://campanion.vercel.app/api/v1/campsite-news')
     .then((res) => res.body)
 }
 
 export function getCampsiteDetailed() {
   return request
-    .get('http://campanion.vercel.app/api/v1/campsite-details')
+    .get('https://campanion.vercel.app/api/v1/campsite-details')
     .then((res) => res.body)
 }
