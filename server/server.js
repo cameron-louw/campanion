@@ -46,6 +46,6 @@ server.get('https://campanion.vercel.app/api/v1/campsite-news', (req, res) => {
     .catch((e) => console.log(e.message))
 })
 
-server.use('/api/v1/unsplash', unsplashRoutes)
+server.use('https://campanion.vercel.app/api/v1/unsplash', unsplashRoutes)
 
 module.exports = server
