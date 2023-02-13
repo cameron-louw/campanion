@@ -3,7 +3,9 @@ import request from 'superagent'
 
 // coordinate
 export function getTracks() {
-  return request.get('/api/v1/tracks').then((res) => res.body)
+  return request
+    .get('http://campanion.vercel.app/api/v1/tracks')
+    .then((res) => res.body)
 }
 
 // export function getNorthlandTracks() {
