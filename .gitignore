@@ -1,4 +1,4 @@
-# .gitignore
+# .gitignore file
 
 # Log files
 *.log
@@ -17,3 +17,5 @@ node_modules/
 
 # Apple
 .DS_Store
+.vercel
+
