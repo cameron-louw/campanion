@@ -1,0 +1,23 @@
+{
+  "public": "server/public",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/server/public/$1"
+    }
+  ],
+  "projectId": "prj_IGHKg8eXlxSA1hx9jOOmlJQxQcQY",
+  "orgId": "lx7Z1XYmSVckfPViyKoSpHLm",
+  "settings": {
+    "createdAt": 1676263151445,
+    "framework": null,
+    "devCommand": null,
+    "installCommand": null,
+    "buildCommand": null,
+    "outputDirectory": null,
+    "rootDirectory": null,
+    "directoryListing": false,
+    "nodeVersion": "18.x",
+    "analyticsId": "xd2i5joxgwoXqx9h8RUgxhrNDtQ"
+  }
+}

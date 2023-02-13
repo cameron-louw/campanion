@@ -1,13 +1,5 @@
 # .gitignore file
 
-# Log files
-*.log
-
-# Binary files
-*.jpg
-*.png
-*.gif
-
 # Directories
 node_modules/
 
@@ -17,5 +9,5 @@ node_modules/
 
 # Apple
 .DS_Store
-.vercel
+
 
