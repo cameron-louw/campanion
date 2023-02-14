@@ -10,10 +10,6 @@ function Nav(props) {
   const [unsplash, setUnsplash] = useState([])
   const [clickedCampsite, setClickedCampsite] = useState({})
 
-  // console.log('unsplash', unsplash)
-  // props.updateCampnameSearch(unsplash)
-  // console.log('campsiteID', campsiteID)
-
   useEffect(() => {
     getCampsites()
       .then((track) => {
@@ -33,8 +29,6 @@ function Nav(props) {
 
   let clickedCamp = ''
 
-  // console.log('clicked', clickedCamp)
-  // console.log('clickedCamp', clickedCamp)
   return (
     <>
       <nav className="CampDetails">
@@ -47,7 +41,6 @@ function Nav(props) {
                   <Accordion.Control
                     onClick={() => {
                       setCampsiteID(campsite.assetId)
-                      // setUnsplash(campsites[i].name)
                       setClickedCampsite(
                         (clickedCamp = campsites.find(
                           (site) => site.assetId === campsite.assetId

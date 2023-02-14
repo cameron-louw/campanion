@@ -9,7 +9,7 @@ import {
   CircleMarker,
 } from 'react-leaflet'
 
-// WALKING TRAINS
+// WALKING TRAILS
 export default function Map(props) {
   const campsiteLocation = props.campCoOrdinates.reverse()
   const fillBlueOptions = { fillColor: 'blue' }
