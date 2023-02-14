@@ -12,7 +12,15 @@ dotenv.config()
 
 server.use(express.json())
 server.use(express.static(path.join(__dirname, './public')))
-server.use(cors('*'))
+
+const corsOptions = {
+  origin: 'https://campanion.vercel.app',
+  optionsSuccessStatus: 200,
+}
+
+server.use(cors(corsOptions))
+
+// server.use(cors('*'))
 
 server.get('/api/v1/tracks', (req, res) => {
   request
