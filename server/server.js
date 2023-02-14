@@ -19,7 +19,6 @@ const corsOptions = {
 }
 
 server.use(cors(corsOptions))
-
 // server.use(cors('*'))
 
 server.get('/api/v1/tracks', (req, res) => {
