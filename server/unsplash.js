@@ -1,5 +1,3 @@
-// consuming external api, 2 step
-
 const express = require('express')
 const request = require('superagent')
 
@@ -12,9 +10,6 @@ dotenv.config()
 
 const accessKey = process.env.ACCESS_KEY
 
-// req.params.search
-
-// GET /api/v1/unsplash
 router.get('/:search', (req, res) => {
   request
     .get(

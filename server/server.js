@@ -5,7 +5,6 @@ const cors = require('cors')
 const request = require('superagent')
 
 const unsplashRoutes = require('./unsplash')
-// require('dotenv').config()
 
 const server = express()
 const dotenv = require('dotenv')
@@ -15,7 +14,6 @@ server.use(express.json())
 server.use(express.static(path.join(__dirname, './public')))
 server.use(cors('*'))
 
-// DEPARTMENT OF CONSERVATION APIS
 server.get('/api/v1/tracks', (req, res) => {
   request
     .get(`https://api.doc.govt.nz/v1/tracks?coordinates=nzgd2000`)

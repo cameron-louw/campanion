@@ -27,8 +27,6 @@ function Nav(props) {
       })
   }, [])
 
-  let clickedCamp = ''
-
   return (
     <>
       <nav className="CampDetails">
@@ -42,9 +40,9 @@ function Nav(props) {
                     onClick={() => {
                       setCampsiteID(campsite.assetId)
                       setClickedCampsite(
-                        (clickedCamp = campsites.find(
+                        campsites.find(
                           (site) => site.assetId === campsite.assetId
-                        ))
+                        )
                       )
                       props.updateCampingCoOrdinates([
                         campsites[i]?.lon,
