@@ -15,6 +15,13 @@ dotenv.config()
 server.use(express.json())
 server.use(express.static(path.join(__dirname, './public')))
 
+server.use(
+  cors({
+    origin: 'https://campanion.vercel.app/',
+    optionsSuccessStatus: 200,
+  })
+)
+
 const corsOptions = {
   origin: 'https://campanion.vercel.app',
   optionsSuccessStatus: 200,
@@ -44,5 +51,9 @@ server.get(`/api/v1/campsite-news`, (req, res) => {
 })
 
 server.use('/api/v1/unsplash', unsplashRoutes)
+
+// server.listen(3000, () => {
+//   console.log('server listening on port 3000')
+// })
 
 module.exports = server
