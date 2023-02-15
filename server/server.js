@@ -23,17 +23,7 @@ const corsOptions = {
 server.use(cors(corsOptions))
 // server.use(cors('*'))
 
-server.get('https://campanion.vercel.app/api/v1/tracks', (req, res) => {
-  request
-    .get(`https://api.doc.govt.nz/v1/tracks?coordinates=nzgd2000`)
-    .set('x-api-key', process.env.DOC_API_KEY)
-    .then((response) => {
-      res.json(response.body)
-    })
-    .catch((e) => console.error(e))
-})
-
-server.get('https://campanion.vercel.app/api/v1/campsites', (req, res) => {
+server.get(`/api/v1/campsites`, (req, res) => {
   request
     .get(`https://api.doc.govt.nz/v2/campsites?coordinates=nzgd2000`)
     .set('x-api-key', process.env.DOC_API_KEY)
@@ -43,7 +33,7 @@ server.get('https://campanion.vercel.app/api/v1/campsites', (req, res) => {
     .catch((e) => console.log(e.message))
 })
 
-server.get('https://campanion.vercel.app/api/v1/campsite-news', (req, res) => {
+server.get(`/api/v1/campsite-news`, (req, res) => {
   request
     .get(`https://api.doc.govt.nz/v2/campsites/alerts`)
     .set('x-api-key', process.env.DOC_API_KEY)
