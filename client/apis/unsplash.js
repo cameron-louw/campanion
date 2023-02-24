@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-const endpoint = 'https://campanion.vercel.app'
+const endpoint = 'https://api.vercel.com'
 
 export function fetchImages(search) {
   return request

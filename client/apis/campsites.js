@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-const endpoint = 'https://campanion.vercel.app'
+const endpoint = 'https://api.vercel.com'
 
 export function getCampsites() {
   return request.get(`${endpoint}/api/v1/campsites`).then((res) => res.body)
