@@ -52,8 +52,5 @@ server.get(`/api/v2/campsite-news`, (req, res) => {
 
 server.use('/api/v2/unsplash', unsplashRoutes)
 
-// server.listen(3000, () => {
-//   console.log('server listening on port 3000')
-// })
 
 module.exports = server
