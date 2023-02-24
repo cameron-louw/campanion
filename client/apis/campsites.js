@@ -1,9 +1,9 @@
 import request from 'superagent'
 
-const endpoint = 'https://api.vercel.com'
+const endpoint = 'https://api.doc.govt.nz'
 
 export function getCampsites() {
-  return request.get(`${endpoint}/api/v1/campsites`).then((res) => res.body)
+  return request.get(`${endpoint}/api/v2/campsites`).then((res) => res.body)
 }
 
 export function getCampsiteNews() {
@@ -12,6 +12,6 @@ export function getCampsiteNews() {
 
 export function getCampsiteDetailed() {
   return request
-    .get(`${endpoint}/api/v1/campsite-details`)
+    .get(`${endpoint}/api/v2/campsite-details`)
     .then((res) => res.body)
 }
