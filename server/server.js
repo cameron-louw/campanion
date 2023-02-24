@@ -14,21 +14,21 @@ dotenv.config()
 
 server.use(express.json())
 server.use(express.static(path.join(__dirname, './public')))
+server.use(cors('*'))
 
-server.use(
-  cors({
-    origin: 'https://campanion.vercel.app/',
-    optionsSuccessStatus: 200,
-  })
-)
+// server.use(
+//   cors({
+//     origin: 'https://campanion.vercel.app/',
+//     optionsSuccessStatus: 200,
+//   })
+// )
 
-const corsOptions = {
-  origin: 'https://campanion.vercel.app',
-  optionsSuccessStatus: 200,
-}
+// const corsOptions = {
+//   origin: 'https://campanion.vercel.app',
+//   optionsSuccessStatus: 200,
+// }
 
-server.use(cors(corsOptions))
-// server.use(cors('*'))
+// server.use(cors(corsOptions))
 
 server.get(`/api/v2/campsites`, (req, res) => {
   request
