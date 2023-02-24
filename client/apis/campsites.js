@@ -7,7 +7,7 @@ export function getCampsites() {
 }
 
 export function getCampsiteNews() {
-  return request.get(`${endpoint}/api/v1/campsite-news`).then((res) => res.body)
+  return request.get(`${endpoint}/api/v2/campsite-news`).then((res) => res.body)
 }
 
 export function getCampsiteDetailed() {
