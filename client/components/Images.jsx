@@ -19,7 +19,6 @@ function Region({ label, image, description }) {
 }
 
 export default function Image(props) {
-  // object
   const [images, setImages] = useState([])
   useEffect(() => {
     fetchImages(props.campsiteName + ' camping')

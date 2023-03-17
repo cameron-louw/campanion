@@ -1,7 +1,5 @@
 import { RECEIVE_IMAGES } from '../actions'
 
-// Initial state is empty array,
-// Each time the reducer receives a new payload (search response, array of objects)
 function getImage(state = [], action) {
   const { type, payload } = action
 

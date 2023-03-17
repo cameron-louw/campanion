@@ -1,14 +1,11 @@
 const path = require('path')
 const express = require('express')
-
 const cors = require('cors')
 const request = require('superagent')
-
 const unsplashRoutes = require('./unsplash')
-// require('dotenv').config()
-
 const server = express()
 const dotenv = require('dotenv')
+
 dotenv.config()
 
 server.use(express.json())
@@ -45,20 +42,6 @@ server.get('/api/v1/campsite-news', (req, res) => {
     })
     .catch((e) => console.log(e.message))
 })
-// GET /api/v1/unsplash
-// server.get('/api/v1/unsplash/:search', (req, res) => {
-//   request
-//     .get(
-//       `https://api.unsplash.com/search/photos?client_id=${accessKey}&page=1&query=${req.params.search}`
-//     )
-//     // .set('x-api-key', process.env.ACCESS_KEY)
-//     .then((result) => {
-//       res.json(result.body.results)
-//     })
-//     .catch((err) => {
-//       res.status(500).send(err.message)
-//     })
-// })
 
 server.use('/api/v1/unsplash', unsplashRoutes)
 
