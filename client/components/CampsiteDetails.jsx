@@ -27,8 +27,11 @@ function Nav(props) {
       })
   }, [])
 
+<<<<<<< HEAD
   let clickedCamp = ''
 
+=======
+>>>>>>> f599a6b6822b53917821f74c7a2ec1defd13cd76
   return (
     <>
       <nav className="CampDetails">
@@ -41,11 +44,10 @@ function Nav(props) {
                   <Accordion.Control
                     onClick={() => {
                       setCampsiteID(campsite.assetId)
-                      // setUnsplash(campsites[i].name)
                       setClickedCampsite(
-                        (clickedCamp = campsites.find(
+                        campsites.find(
                           (site) => site.assetId === campsite.assetId
-                        ))
+                        )
                       )
                       props.updateCampingCoOrdinates([
                         campsites[i]?.lon,

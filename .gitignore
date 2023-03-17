@@ -1,3 +1,17 @@
+<<<<<<< HEAD
 node_modules
 
 .env
+=======
+# Directories
+node_modules/
+
+# Environment-specific files
+.env
+.env.*.local
+
+# Apple
+.DS_Store
+
+
+>>>>>>> f599a6b6822b53917821f74c7a2ec1defd13cd76

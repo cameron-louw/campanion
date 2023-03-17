@@ -9,9 +9,8 @@ import {
   CircleMarker,
 } from 'react-leaflet'
 
-// WALKING TRAINS
-export default function Map(props) {
-  const campsiteLocation = props.campCoOrdinates.reverse()
+export default function Map({ campCoOrdinates }) {
+  const campsiteLocation = campCoOrdinates.reverse()
   const fillBlueOptions = { fillColor: 'blue' }
   const redOptions = { color: 'red' }
 
@@ -43,12 +42,12 @@ export default function Map(props) {
   )
 }
 
-function UpdateMapCentre(props) {
+function UpdateMapCentre({ mapCentre }) {
   const map = useMap()
 
   useEffect(() => {
-    map.panTo(props.mapCentre)
-  }, [props.mapCentre])
+    map.panTo(mapCentre)
+  }, [mapCentre])
 
   return null
 }

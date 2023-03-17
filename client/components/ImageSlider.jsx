@@ -6,8 +6,13 @@ import Autoplay from 'embla-carousel-autoplay'
 import { Image } from '@mantine/core'
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons'
 
+<<<<<<< HEAD
 export default function ImageSlider(props) {
   const slides = props.images.map((url) => (
+=======
+export default function ImageSlider({ images }) {
+  const slides = images.map((url) => (
+>>>>>>> f599a6b6822b53917821f74c7a2ec1defd13cd76
     <Carousel.Slide key={url}>
       <Image src={url} className="image-slider" height="80%" />
     </Carousel.Slide>

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Group, Avatar, Text, Grid } from '@mantine/core'
+import { Grid } from '@mantine/core'
 import BetterCarousel from './ImageSlider'
 import { fetchImages } from '../apis/unsplash'
 
+<<<<<<< HEAD
 // ACCORDIAN COMPONENT
 function Region({ label, image, description }) {
   return (
@@ -19,18 +20,19 @@ function Region({ label, image, description }) {
 }
 
 export default function Image(props) {
+=======
+export default function Image({ campsiteName }) {
+>>>>>>> f599a6b6822b53917821f74c7a2ec1defd13cd76
   const [images, setImages] = useState([])
   useEffect(() => {
-    fetchImages(props.campsiteName + ' camping')
+    fetchImages(`${campsiteName} camping`)
       .then((images) => {
         setImages(images)
       })
-      .catch((e) => console.error(e.message))
-  }, [props.campsiteName])
+      .catch((error) => console.error(error.message))
+  }, [campsiteName])
 
-  let urls = images.map((urlArr) => {
-    return urlArr?.urls?.small
-  })
+  const urls = images.map((urlArr) => urlArr?.urls?.small)
 
   return (
     <Grid>

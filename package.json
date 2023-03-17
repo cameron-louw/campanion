@@ -48,6 +48,7 @@
     "embla-carousel-autoplay": "^7.0.5",
     "emoji-picker-react": "^4.4.5",
     "express": "^4.17.2",
+    "fireship": "^0.1.1",
     "interweave": "^13.0.0",
     "leaflet": "^1.9.2",
     "react-leaflet": "^3.2.5",

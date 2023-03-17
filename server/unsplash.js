@@ -10,7 +10,10 @@ dotenv.config()
 
 const accessKey = process.env.ACCESS_KEY
 
+<<<<<<< HEAD
 // GET /api/v1/unsplash
+=======
+>>>>>>> f599a6b6822b53917821f74c7a2ec1defd13cd76
 router.get('/:search', (req, res) => {
   request
     .get(
